@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "**"
 
 defaults:
   run:
-    working-directory: packages/container
+    working-directory: ./
 
 jobs:
   build:
