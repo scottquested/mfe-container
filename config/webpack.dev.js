@@ -22,7 +22,17 @@ const devConfig = {
 				about: "mfe_about@http://localhost:3002/remoteEntry.js",
 				dashboard: "mfe_dashboard@http://localhost:3003/remoteEntry.js",
 			},
-			shared: packageJson.dependencies,
+			shared: {
+				...packageJson.dependencies,
+				react: {
+					singleton: true,
+					requiredVersion: packageJson.dependencies.react,
+				},
+				"react-dom": {
+					singleton: true,
+					requiredVersion: packageJson.dependencies["react-dom"],
+				},
+			},
 		}),
 	],
 };
