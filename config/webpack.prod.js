@@ -18,6 +18,7 @@ const prodConfig = {
 				home: `mfe_home@${domain}/home/remoteEntry.js`,
 				about: `mfe_about@${domain}/about/remoteEntry.js`,
 				dashboard: `mfe_dashboard@${domain}/dashboard/remoteEntry.js`,
+				components: `mfe_components@${domain}/components/remoteEntry.js`,
 			},
 			shared: packageJson.dependencies,
 		}),
