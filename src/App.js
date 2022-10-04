@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
+import { Header, Button } from "components/Components";
 import Nav from "./components/Nav";
 
 const routes = [
@@ -51,6 +52,7 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<>
+				<Header someText="Header component in the container" />
 				<Nav someFakeAuthPermissons={someFakeAuthPermissons} />
 				<div className="my-8 flex-1 flex">
 					<Routes>

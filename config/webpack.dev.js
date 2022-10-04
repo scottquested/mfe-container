@@ -13,6 +13,8 @@ const devConfig = {
 		historyApiFallback: {
 			index: "/index.html",
 		},
+		hot: true,
+		headers: { "Access-Control-Allow-Origin": "*" },
 	},
 	plugins: [
 		new ModuleFederationPlugin({
@@ -21,6 +23,7 @@ const devConfig = {
 				home: "mfe_home@http://localhost:3001/remoteEntry.js",
 				about: "mfe_about@http://localhost:3002/remoteEntry.js",
 				dashboard: "mfe_dashboard@http://localhost:3003/remoteEntry.js",
+				components: "mfe_components@http://localhost:3004/remoteEntry.js",
 			},
 			shared: {
 				...packageJson.dependencies,
